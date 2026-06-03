@@ -32,10 +32,9 @@ export class AlertPage extends BasePage {
     }
 
     async deleteAlert(alertName: string) {
-        const deleteButton = this.page.locator(`//*[text()="${alertName}"]/following-sibling::*//button[@data-test="delete-alert"]`);
-        await deleteButton.hover();
-        await this.page.waitForTimeout(500);
-        await deleteButton.click({ delay: 200 });
+        await this.page.locator(`//*[text()="${alertName}"]/following-sibling::*//button[@data-test="delete-alert"]`).evaluate(
+            (el: HTMLElement) => el.click()
+        );
         console.log("Delete button clicked");
         await this.page.waitForTimeout(1000); // Wait for the dialog to appear
         const dialogPromise = this.page.waitForEvent('dialog');
@@ -71,10 +70,21 @@ export class AlertPage extends BasePage {
 
         //wite new alert to oldAlert data to faker.ts for future use
         const fs = require('fs');
-        fs.appendFileSync(
-            'utils/faker.ts',
-            `export const oldAlert: Alert = ${JSON.stringify(newAlert, null, 4)};`
+
+        const filePath = 'utils/faker.ts';
+
+        let content = fs.readFileSync(filePath, 'utf8');
+
+        // Xóa export const oldAlert cũ
+        content = content.replace(
+            /export const oldAlert: Alert = [\s\S]*?};\s*/g,
+            ''
         );
+
+        // Thêm oldAlert mới
+        content += `export const oldAlert: Alert = ${JSON.stringify(newAlert, null, 4)};`;
+
+        fs.writeFileSync(filePath, content);
     }
 
     async isAlertEdited() {

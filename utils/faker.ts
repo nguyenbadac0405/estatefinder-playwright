@@ -38,7 +38,7 @@ export const generateAlert = (): Alert => ({
 });
 
 export const OldAlert: Alert = {
-    name: "Test Alert 1785",
+    name: "Test Alert 9302",
     city: "New York",
     minPrice: "500000",
     maxPrice: "1000000",
@@ -46,7 +46,7 @@ export const OldAlert: Alert = {
     propertyType: "House"
 };
 export const oldAlert: Alert = {
-    "name": "Test Alert 1785",
+    "name": "Test Alert 4918",
     "city": "New York",
     "minPrice": "500000",
     "maxPrice": "1000000",
