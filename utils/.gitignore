@@ -1,9 +1,0 @@
-# Playwright reports
-playwright-report/
-
-# Playwright test results
-test-results/
-
-# Allure
-allure-results/
-allure-report/
