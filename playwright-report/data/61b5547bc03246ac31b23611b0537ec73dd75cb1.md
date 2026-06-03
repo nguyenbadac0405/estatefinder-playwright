@@ -1,0 +1,1277 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: alert.spec.ts >> Edit alert successfully
+- Location: tests\alert.spec.ts:33:5
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for locator('//*[text()="Test Alert 9514"]/following-sibling::*//*[@data-test="edit-alert"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "EstateFinder" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Listings" [ref=e6] [cursor=pointer]:
+          - /url: /listings
+        - link "My Alerts" [ref=e7] [cursor=pointer]:
+          - /url: /alerts
+        - generic [ref=e8]: demo@example.com
+        - link "Sign out" [ref=e9] [cursor=pointer]:
+          - /url: /users/sign_out
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - heading "My property alerts" [level=1] [ref=e12]
+      - link "New alert" [ref=e13] [cursor=pointer]:
+        - /url: /alerts/new
+    - table [ref=e14]:
+      - rowgroup [ref=e15]:
+        - row "Name City Price range Bedrooms Type Matches Status" [ref=e16]:
+          - columnheader "Name" [ref=e17]
+          - columnheader "City" [ref=e18]
+          - columnheader "Price range" [ref=e19]
+          - columnheader "Bedrooms" [ref=e20]
+          - columnheader "Type" [ref=e21]
+          - columnheader "Matches" [ref=e22]
+          - columnheader "Status" [ref=e23]
+          - columnheader [ref=e24]
+      - rowgroup [ref=e25]:
+        - row "Test Alert 2810 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e26]:
+          - cell "Test Alert 2810" [ref=e27]
+          - cell "New York" [ref=e28]
+          - cell "$500,000 – $1,000,000" [ref=e29]
+          - cell "3+" [ref=e30]
+          - cell "house" [ref=e31]
+          - cell "0" [ref=e32]
+          - cell "Active" [ref=e33]:
+            - generic [ref=e34]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e35]:
+            - link "Edit" [ref=e36] [cursor=pointer]:
+              - /url: /alerts/373/edit
+            - link "Unsubscribe" [ref=e37] [cursor=pointer]:
+              - /url: /alerts/373/unsubscribe
+            - button "Delete" [ref=e39] [cursor=pointer]
+        - row "Test Alert 9528 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e40]:
+          - cell "Test Alert 9528" [ref=e41]
+          - cell "New York" [ref=e42]
+          - cell "$500,000 – $1,000,000" [ref=e43]
+          - cell "3+" [ref=e44]
+          - cell "house" [ref=e45]
+          - cell "0" [ref=e46]
+          - cell "Active" [ref=e47]:
+            - generic [ref=e48]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e49]:
+            - link "Edit" [ref=e50] [cursor=pointer]:
+              - /url: /alerts/372/edit
+            - link "Unsubscribe" [ref=e51] [cursor=pointer]:
+              - /url: /alerts/372/unsubscribe
+            - button "Delete" [ref=e53] [cursor=pointer]
+        - row "Test Alert 9912 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e54]:
+          - cell "Test Alert 9912" [ref=e55]
+          - cell "New York" [ref=e56]
+          - cell "$500,000 – $1,000,000" [ref=e57]
+          - cell "3+" [ref=e58]
+          - cell "house" [ref=e59]
+          - cell "0" [ref=e60]
+          - cell "Active" [ref=e61]:
+            - generic [ref=e62]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e63]:
+            - link "Edit" [ref=e64] [cursor=pointer]:
+              - /url: /alerts/371/edit
+            - link "Unsubscribe" [ref=e65] [cursor=pointer]:
+              - /url: /alerts/371/unsubscribe
+            - button "Delete" [ref=e67] [cursor=pointer]
+        - row "Test Alert 4752 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e68]:
+          - cell "Test Alert 4752" [ref=e69]
+          - cell "New York" [ref=e70]
+          - cell "$500,000 – $1,000,000" [ref=e71]
+          - cell "3+" [ref=e72]
+          - cell "house" [ref=e73]
+          - cell "0" [ref=e74]
+          - cell "Active" [ref=e75]:
+            - generic [ref=e76]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e77]:
+            - link "Edit" [ref=e78] [cursor=pointer]:
+              - /url: /alerts/370/edit
+            - link "Unsubscribe" [ref=e79] [cursor=pointer]:
+              - /url: /alerts/370/unsubscribe
+            - button "Delete" [ref=e81] [cursor=pointer]
+        - row "Test Alert 9875 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e82]:
+          - cell "Test Alert 9875" [ref=e83]
+          - cell "New York" [ref=e84]
+          - cell "$500,000 – $1,000,000" [ref=e85]
+          - cell "3+" [ref=e86]
+          - cell "house" [ref=e87]
+          - cell "0" [ref=e88]
+          - cell "Active" [ref=e89]:
+            - generic [ref=e90]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e91]:
+            - link "Edit" [ref=e92] [cursor=pointer]:
+              - /url: /alerts/369/edit
+            - link "Unsubscribe" [ref=e93] [cursor=pointer]:
+              - /url: /alerts/369/unsubscribe
+            - button "Delete" [ref=e95] [cursor=pointer]
+        - row "Test Alert 4272 New York $500,000 – $1,000,000 3+ house 0 Disabled Edit Unsubscribe Delete" [ref=e96]:
+          - cell "Test Alert 4272" [ref=e97]
+          - cell "New York" [ref=e98]
+          - cell "$500,000 – $1,000,000" [ref=e99]
+          - cell "3+" [ref=e100]
+          - cell "house" [ref=e101]
+          - cell "0" [ref=e102]
+          - cell "Disabled" [ref=e103]:
+            - generic [ref=e104]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e105]:
+            - link "Edit" [ref=e106] [cursor=pointer]:
+              - /url: /alerts/361/edit
+            - link "Unsubscribe" [ref=e107] [cursor=pointer]:
+              - /url: /alerts/361/unsubscribe
+            - button "Delete" [ref=e109] [cursor=pointer]
+        - row "Test Alert 9073 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e110]:
+          - cell "Test Alert 9073" [ref=e111]
+          - cell "New York" [ref=e112]
+          - cell "$500,000 – $1,000,000" [ref=e113]
+          - cell "3+" [ref=e114]
+          - cell "house" [ref=e115]
+          - cell "0" [ref=e116]
+          - cell "Active" [ref=e117]:
+            - generic [ref=e118]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e119]:
+            - link "Edit" [ref=e120] [cursor=pointer]:
+              - /url: /alerts/360/edit
+            - link "Unsubscribe" [ref=e121] [cursor=pointer]:
+              - /url: /alerts/360/unsubscribe
+            - button "Delete" [ref=e123] [cursor=pointer]
+        - row "Test Alert 6518 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e124]:
+          - cell "Test Alert 6518" [ref=e125]
+          - cell "New York" [ref=e126]
+          - cell "$500,000 – $1,000,000" [ref=e127]
+          - cell "3+" [ref=e128]
+          - cell "house" [ref=e129]
+          - cell "0" [ref=e130]
+          - cell "Active" [ref=e131]:
+            - generic [ref=e132]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e133]:
+            - link "Edit" [ref=e134] [cursor=pointer]:
+              - /url: /alerts/359/edit
+            - link "Unsubscribe" [ref=e135] [cursor=pointer]:
+              - /url: /alerts/359/unsubscribe
+            - button "Delete" [ref=e137] [cursor=pointer]
+        - row "Test Alert 8281 New York $500,000 – $1,000,000 3+ house 0 Active Edit Unsubscribe Delete" [ref=e138]:
+          - cell "Test Alert 8281" [ref=e139]
+          - cell "New York" [ref=e140]
+          - cell "$500,000 – $1,000,000" [ref=e141]
+          - cell "3+" [ref=e142]
+          - cell "house" [ref=e143]
+          - cell "0" [ref=e144]
+          - cell "Active" [ref=e145]:
+            - generic [ref=e146]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e147]:
+            - link "Edit" [ref=e148] [cursor=pointer]:
+              - /url: /alerts/358/edit
+            - link "Unsubscribe" [ref=e149] [cursor=pointer]:
+              - /url: /alerts/358/unsubscribe
+            - button "Delete" [ref=e151] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e152]:
+          - cell "Hanoi Standard Alert" [ref=e153]
+          - cell "Hanoi" [ref=e154]
+          - cell "$1,000 – $5,000" [ref=e155]
+          - cell "—+" [ref=e156]
+          - cell "any" [ref=e157]
+          - cell "0" [ref=e158]
+          - cell "Active" [ref=e159]:
+            - generic [ref=e160]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e161]:
+            - link "Edit" [ref=e162] [cursor=pointer]:
+              - /url: /alerts/226/edit
+            - link "Unsubscribe" [ref=e163] [cursor=pointer]:
+              - /url: /alerts/226/unsubscribe
+            - button "Delete" [ref=e165] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e166]:
+          - cell "Hanoi Standard Alert" [ref=e167]
+          - cell "Hanoi" [ref=e168]
+          - cell "$1,000 – $5,000" [ref=e169]
+          - cell "—+" [ref=e170]
+          - cell "any" [ref=e171]
+          - cell "0" [ref=e172]
+          - cell "Active" [ref=e173]:
+            - generic [ref=e174]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e175]:
+            - link "Edit" [ref=e176] [cursor=pointer]:
+              - /url: /alerts/224/edit
+            - link "Unsubscribe" [ref=e177] [cursor=pointer]:
+              - /url: /alerts/224/unsubscribe
+            - button "Delete" [ref=e179] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e180]:
+          - cell "Hanoi Standard Alert" [ref=e181]
+          - cell "Hanoi" [ref=e182]
+          - cell "$1,000 – $5,000" [ref=e183]
+          - cell "—+" [ref=e184]
+          - cell "any" [ref=e185]
+          - cell "0" [ref=e186]
+          - cell "Active" [ref=e187]:
+            - generic [ref=e188]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e189]:
+            - link "Edit" [ref=e190] [cursor=pointer]:
+              - /url: /alerts/222/edit
+            - link "Unsubscribe" [ref=e191] [cursor=pointer]:
+              - /url: /alerts/222/unsubscribe
+            - button "Delete" [ref=e193] [cursor=pointer]
+        - row "Test Alert Hanoi $1,000 – $5,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e194]:
+          - cell "Test Alert" [ref=e195]
+          - cell "Hanoi" [ref=e196]
+          - cell "$1,000 – $5,000" [ref=e197]
+          - cell "—+" [ref=e198]
+          - cell "any" [ref=e199]
+          - cell "0" [ref=e200]
+          - cell "Active" [ref=e201]:
+            - generic [ref=e202]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e203]:
+            - link "Edit" [ref=e204] [cursor=pointer]:
+              - /url: /alerts/220/edit
+            - link "Unsubscribe" [ref=e205] [cursor=pointer]:
+              - /url: /alerts/220/unsubscribe
+            - button "Delete" [ref=e207] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e208]:
+          - cell "Hanoi Standard Alert" [ref=e209]
+          - cell "Hanoi" [ref=e210]
+          - cell "$1,000 – $5,000" [ref=e211]
+          - cell "2+" [ref=e212]
+          - cell "apartment" [ref=e213]
+          - cell "0" [ref=e214]
+          - cell "Active" [ref=e215]:
+            - generic [ref=e216]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e217]:
+            - link "Edit" [ref=e218] [cursor=pointer]:
+              - /url: /alerts/218/edit
+            - link "Unsubscribe" [ref=e219] [cursor=pointer]:
+              - /url: /alerts/218/unsubscribe
+            - button "Delete" [ref=e221] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e222]:
+          - cell "Invalid Price Alert" [ref=e223]
+          - cell "Hanoi" [ref=e224]
+          - cell "$5,000 – $1,000" [ref=e225]
+          - cell "—+" [ref=e226]
+          - cell "any" [ref=e227]
+          - cell "0" [ref=e228]
+          - cell "Active" [ref=e229]:
+            - generic [ref=e230]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e231]:
+            - link "Edit" [ref=e232] [cursor=pointer]:
+              - /url: /alerts/217/edit
+            - link "Unsubscribe" [ref=e233] [cursor=pointer]:
+              - /url: /alerts/217/unsubscribe
+            - button "Delete" [ref=e235] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e236]:
+          - cell "Invalid Price Alert" [ref=e237]
+          - cell "Hanoi" [ref=e238]
+          - cell "$5,000 – $1,000" [ref=e239]
+          - cell "—+" [ref=e240]
+          - cell "any" [ref=e241]
+          - cell "0" [ref=e242]
+          - cell "Active" [ref=e243]:
+            - generic [ref=e244]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e245]:
+            - link "Edit" [ref=e246] [cursor=pointer]:
+              - /url: /alerts/216/edit
+            - link "Unsubscribe" [ref=e247] [cursor=pointer]:
+              - /url: /alerts/216/unsubscribe
+            - button "Delete" [ref=e249] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e250]:
+          - cell "Hanoi Standard Alert" [ref=e251]
+          - cell "Hanoi" [ref=e252]
+          - cell "$1,000 – $5,000" [ref=e253]
+          - cell "2+" [ref=e254]
+          - cell "apartment" [ref=e255]
+          - cell "0" [ref=e256]
+          - cell "Active" [ref=e257]:
+            - generic [ref=e258]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e259]:
+            - link "Edit" [ref=e260] [cursor=pointer]:
+              - /url: /alerts/214/edit
+            - link "Unsubscribe" [ref=e261] [cursor=pointer]:
+              - /url: /alerts/214/unsubscribe
+            - button "Delete" [ref=e263] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e264]:
+          - cell "Invalid Price Alert" [ref=e265]
+          - cell "Hanoi" [ref=e266]
+          - cell "$5,000 – $1,000" [ref=e267]
+          - cell "—+" [ref=e268]
+          - cell "any" [ref=e269]
+          - cell "0" [ref=e270]
+          - cell "Active" [ref=e271]:
+            - generic [ref=e272]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e273]:
+            - link "Edit" [ref=e274] [cursor=pointer]:
+              - /url: /alerts/213/edit
+            - link "Unsubscribe" [ref=e275] [cursor=pointer]:
+              - /url: /alerts/213/unsubscribe
+            - button "Delete" [ref=e277] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e278]:
+          - cell "Invalid Price Alert" [ref=e279]
+          - cell "Hanoi" [ref=e280]
+          - cell "$5,000 – $1,000" [ref=e281]
+          - cell "—+" [ref=e282]
+          - cell "any" [ref=e283]
+          - cell "0" [ref=e284]
+          - cell "Active" [ref=e285]:
+            - generic [ref=e286]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e287]:
+            - link "Edit" [ref=e288] [cursor=pointer]:
+              - /url: /alerts/212/edit
+            - link "Unsubscribe" [ref=e289] [cursor=pointer]:
+              - /url: /alerts/212/unsubscribe
+            - button "Delete" [ref=e291] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e292]:
+          - cell "Hanoi Standard Alert" [ref=e293]
+          - cell "Hanoi" [ref=e294]
+          - cell "$1,000 – $5,000" [ref=e295]
+          - cell "2+" [ref=e296]
+          - cell "apartment" [ref=e297]
+          - cell "0" [ref=e298]
+          - cell "Active" [ref=e299]:
+            - generic [ref=e300]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e301]:
+            - link "Edit" [ref=e302] [cursor=pointer]:
+              - /url: /alerts/210/edit
+            - link "Unsubscribe" [ref=e303] [cursor=pointer]:
+              - /url: /alerts/210/unsubscribe
+            - button "Delete" [ref=e305] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e306]:
+          - cell "Invalid Price Alert" [ref=e307]
+          - cell "Hanoi" [ref=e308]
+          - cell "$5,000 – $1,000" [ref=e309]
+          - cell "—+" [ref=e310]
+          - cell "any" [ref=e311]
+          - cell "0" [ref=e312]
+          - cell "Active" [ref=e313]:
+            - generic [ref=e314]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e315]:
+            - link "Edit" [ref=e316] [cursor=pointer]:
+              - /url: /alerts/209/edit
+            - link "Unsubscribe" [ref=e317] [cursor=pointer]:
+              - /url: /alerts/209/unsubscribe
+            - button "Delete" [ref=e319] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e320]:
+          - cell "Invalid Price Alert" [ref=e321]
+          - cell "Hanoi" [ref=e322]
+          - cell "$5,000 – $1,000" [ref=e323]
+          - cell "—+" [ref=e324]
+          - cell "any" [ref=e325]
+          - cell "0" [ref=e326]
+          - cell "Active" [ref=e327]:
+            - generic [ref=e328]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e329]:
+            - link "Edit" [ref=e330] [cursor=pointer]:
+              - /url: /alerts/208/edit
+            - link "Unsubscribe" [ref=e331] [cursor=pointer]:
+              - /url: /alerts/208/unsubscribe
+            - button "Delete" [ref=e333] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e334]:
+          - cell "Hanoi Standard Alert" [ref=e335]
+          - cell "Hanoi" [ref=e336]
+          - cell "$1,000 – $5,000" [ref=e337]
+          - cell "2+" [ref=e338]
+          - cell "apartment" [ref=e339]
+          - cell "0" [ref=e340]
+          - cell "Active" [ref=e341]:
+            - generic [ref=e342]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e343]:
+            - link "Edit" [ref=e344] [cursor=pointer]:
+              - /url: /alerts/206/edit
+            - link "Unsubscribe" [ref=e345] [cursor=pointer]:
+              - /url: /alerts/206/unsubscribe
+            - button "Delete" [ref=e347] [cursor=pointer]
+        - row "Invalid Price Alert Hanoi $5,000 – $1,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e348]:
+          - cell "Invalid Price Alert" [ref=e349]
+          - cell "Hanoi" [ref=e350]
+          - cell "$5,000 – $1,000" [ref=e351]
+          - cell "—+" [ref=e352]
+          - cell "any" [ref=e353]
+          - cell "0" [ref=e354]
+          - cell "Active" [ref=e355]:
+            - generic [ref=e356]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e357]:
+            - link "Edit" [ref=e358] [cursor=pointer]:
+              - /url: /alerts/205/edit
+            - link "Unsubscribe" [ref=e359] [cursor=pointer]:
+              - /url: /alerts/205/unsubscribe
+            - button "Delete" [ref=e361] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e362]:
+          - cell "Hanoi Standard Alert" [ref=e363]
+          - cell "Hanoi" [ref=e364]
+          - cell "$1,000 – $5,000" [ref=e365]
+          - cell "2+" [ref=e366]
+          - cell "apartment" [ref=e367]
+          - cell "0" [ref=e368]
+          - cell "Active" [ref=e369]:
+            - generic [ref=e370]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e371]:
+            - link "Edit" [ref=e372] [cursor=pointer]:
+              - /url: /alerts/203/edit
+            - link "Unsubscribe" [ref=e373] [cursor=pointer]:
+              - /url: /alerts/203/unsubscribe
+            - button "Delete" [ref=e375] [cursor=pointer]
+        - row "Hanoi Standard Alert Hanoi $1,000 – $5,000 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e376]:
+          - cell "Hanoi Standard Alert" [ref=e377]
+          - cell "Hanoi" [ref=e378]
+          - cell "$1,000 – $5,000" [ref=e379]
+          - cell "2+" [ref=e380]
+          - cell "apartment" [ref=e381]
+          - cell "0" [ref=e382]
+          - cell "Active" [ref=e383]:
+            - generic [ref=e384]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e385]:
+            - link "Edit" [ref=e386] [cursor=pointer]:
+              - /url: /alerts/201/edit
+            - link "Unsubscribe" [ref=e387] [cursor=pointer]:
+              - /url: /alerts/201/unsubscribe
+            - button "Delete" [ref=e389] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $9,999,999 – $200,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e390]:
+          - cell "Bug Price Alert" [ref=e391]
+          - cell "Hanoi" [ref=e392]
+          - cell "$9,999,999 – $200,000" [ref=e393]
+          - cell "—+" [ref=e394]
+          - cell "any" [ref=e395]
+          - cell "0" [ref=e396]
+          - cell "Active" [ref=e397]:
+            - generic [ref=e398]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e399]:
+            - link "Edit" [ref=e400] [cursor=pointer]:
+              - /url: /alerts/199/edit
+            - link "Unsubscribe" [ref=e401] [cursor=pointer]:
+              - /url: /alerts/199/unsubscribe
+            - button "Delete" [ref=e403] [cursor=pointer]
+        - row "Hanoi Apartment Alert — 1780412527658 Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e404]:
+          - cell "Hanoi Apartment Alert — 1780412527658" [ref=e405]
+          - cell "Hanoi" [ref=e406]
+          - cell "$400,000 – $900,000" [ref=e407]
+          - cell "1+" [ref=e408]
+          - cell "apartment" [ref=e409]
+          - cell "2" [ref=e410]
+          - cell "Active" [ref=e411]:
+            - generic [ref=e412]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e413]:
+            - link "Edit" [ref=e414] [cursor=pointer]:
+              - /url: /alerts/197/edit
+            - link "Unsubscribe" [ref=e415] [cursor=pointer]:
+              - /url: /alerts/197/unsubscribe
+            - button "Delete" [ref=e417] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $9,999,999 – $200,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e418]:
+          - cell "Bug Price Alert" [ref=e419]
+          - cell "Hanoi" [ref=e420]
+          - cell "$9,999,999 – $200,000" [ref=e421]
+          - cell "—+" [ref=e422]
+          - cell "any" [ref=e423]
+          - cell "0" [ref=e424]
+          - cell "Active" [ref=e425]:
+            - generic [ref=e426]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e427]:
+            - link "Edit" [ref=e428] [cursor=pointer]:
+              - /url: /alerts/196/edit
+            - link "Unsubscribe" [ref=e429] [cursor=pointer]:
+              - /url: /alerts/196/unsubscribe
+            - button "Delete" [ref=e431] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $9,999,999 – $200,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e432]:
+          - cell "Bug Price Alert" [ref=e433]
+          - cell "Hanoi" [ref=e434]
+          - cell "$9,999,999 – $200,000" [ref=e435]
+          - cell "—+" [ref=e436]
+          - cell "any" [ref=e437]
+          - cell "0" [ref=e438]
+          - cell "Active" [ref=e439]:
+            - generic [ref=e440]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e441]:
+            - link "Edit" [ref=e442] [cursor=pointer]:
+              - /url: /alerts/195/edit
+            - link "Unsubscribe" [ref=e443] [cursor=pointer]:
+              - /url: /alerts/195/unsubscribe
+            - button "Delete" [ref=e445] [cursor=pointer]
+        - row "Hanoi Apartment Alert — 1780410058732 Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e446]:
+          - cell "Hanoi Apartment Alert — 1780410058732" [ref=e447]
+          - cell "Hanoi" [ref=e448]
+          - cell "$400,000 – $900,000" [ref=e449]
+          - cell "1+" [ref=e450]
+          - cell "apartment" [ref=e451]
+          - cell "2" [ref=e452]
+          - cell "Active" [ref=e453]:
+            - generic [ref=e454]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e455]:
+            - link "Edit" [ref=e456] [cursor=pointer]:
+              - /url: /alerts/193/edit
+            - link "Unsubscribe" [ref=e457] [cursor=pointer]:
+              - /url: /alerts/193/unsubscribe
+            - button "Delete" [ref=e459] [cursor=pointer]
+        - row "Alert_67g4el Hanoi $400,000 – $900,000 —+ apartment 2 Active Edit Unsubscribe Delete" [ref=e460]:
+          - cell "Alert_67g4el" [ref=e461]
+          - cell "Hanoi" [ref=e462]
+          - cell "$400,000 – $900,000" [ref=e463]
+          - cell "—+" [ref=e464]
+          - cell "apartment" [ref=e465]
+          - cell "2" [ref=e466]
+          - cell "Active" [ref=e467]:
+            - generic [ref=e468]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e469]:
+            - link "Edit" [ref=e470] [cursor=pointer]:
+              - /url: /alerts/192/edit
+            - link "Unsubscribe" [ref=e471] [cursor=pointer]:
+              - /url: /alerts/192/unsubscribe
+            - button "Delete" [ref=e473] [cursor=pointer]
+        - row "Alert_ml7387 Hanoi $900,000 – $100,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e474]:
+          - cell "Alert_ml7387" [ref=e475]
+          - cell "Hanoi" [ref=e476]
+          - cell "$900,000 – $100,000" [ref=e477]
+          - cell "—+" [ref=e478]
+          - cell "any" [ref=e479]
+          - cell "0" [ref=e480]
+          - cell "Active" [ref=e481]:
+            - generic [ref=e482]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e483]:
+            - link "Edit" [ref=e484] [cursor=pointer]:
+              - /url: /alerts/191/edit
+            - link "Unsubscribe" [ref=e485] [cursor=pointer]:
+              - /url: /alerts/191/unsubscribe
+            - button "Delete" [ref=e487] [cursor=pointer]
+        - row "Alert_ouk6nk Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e488]:
+          - cell "Alert_ouk6nk" [ref=e489]
+          - cell "Hanoi" [ref=e490]
+          - cell "— – —" [ref=e491]
+          - cell "—+" [ref=e492]
+          - cell "any" [ref=e493]
+          - cell "7" [ref=e494]
+          - cell "Active" [ref=e495]:
+            - generic [ref=e496]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e497]:
+            - link "Edit" [ref=e498] [cursor=pointer]:
+              - /url: /alerts/190/edit
+            - link "Unsubscribe" [ref=e499] [cursor=pointer]:
+              - /url: /alerts/190/unsubscribe
+            - button "Delete" [ref=e501] [cursor=pointer]
+        - row "Alert_wbicab Da Nang — – — —+ any 5 Active Edit Unsubscribe Delete" [ref=e502]:
+          - cell "Alert_wbicab" [ref=e503]
+          - cell "Da Nang" [ref=e504]
+          - cell "— – —" [ref=e505]
+          - cell "—+" [ref=e506]
+          - cell "any" [ref=e507]
+          - cell "5" [ref=e508]
+          - cell "Active" [ref=e509]:
+            - generic [ref=e510]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e511]:
+            - link "Edit" [ref=e512] [cursor=pointer]:
+              - /url: /alerts/188/edit
+            - link "Unsubscribe" [ref=e513] [cursor=pointer]:
+              - /url: /alerts/188/unsubscribe
+            - button "Delete" [ref=e515] [cursor=pointer]
+        - row "Alert_o68edb Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e516]:
+          - cell "Alert_o68edb" [ref=e517]
+          - cell "Hanoi" [ref=e518]
+          - cell "— – —" [ref=e519]
+          - cell "—+" [ref=e520]
+          - cell "any" [ref=e521]
+          - cell "7" [ref=e522]
+          - cell "Active" [ref=e523]:
+            - generic [ref=e524]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e525]:
+            - link "Edit" [ref=e526] [cursor=pointer]:
+              - /url: /alerts/187/edit
+            - link "Unsubscribe" [ref=e527] [cursor=pointer]:
+              - /url: /alerts/187/unsubscribe
+            - button "Delete" [ref=e529] [cursor=pointer]
+        - row "Alert_fkvldy Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e530]:
+          - cell "Alert_fkvldy" [ref=e531]
+          - cell "Hanoi" [ref=e532]
+          - cell "— – —" [ref=e533]
+          - cell "—+" [ref=e534]
+          - cell "any" [ref=e535]
+          - cell "7" [ref=e536]
+          - cell "Active" [ref=e537]:
+            - generic [ref=e538]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e539]:
+            - link "Edit" [ref=e540] [cursor=pointer]:
+              - /url: /alerts/186/edit
+            - link "Unsubscribe" [ref=e541] [cursor=pointer]:
+              - /url: /alerts/186/unsubscribe
+            - button "Delete" [ref=e543] [cursor=pointer]
+        - row "Alert_zzope4 Nha Trang — – — —+ any 6 Active Edit Unsubscribe Delete" [ref=e544]:
+          - cell "Alert_zzope4" [ref=e545]
+          - cell "Nha Trang" [ref=e546]
+          - cell "— – —" [ref=e547]
+          - cell "—+" [ref=e548]
+          - cell "any" [ref=e549]
+          - cell "6" [ref=e550]
+          - cell "Active" [ref=e551]:
+            - generic [ref=e552]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e553]:
+            - link "Edit" [ref=e554] [cursor=pointer]:
+              - /url: /alerts/185/edit
+            - link "Unsubscribe" [ref=e555] [cursor=pointer]:
+              - /url: /alerts/185/unsubscribe
+            - button "Delete" [ref=e557] [cursor=pointer]
+        - row "Alert_nwc80a Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e558]:
+          - cell "Alert_nwc80a" [ref=e559]
+          - cell "Hanoi" [ref=e560]
+          - cell "$400,000 – $900,000" [ref=e561]
+          - cell "1+" [ref=e562]
+          - cell "apartment" [ref=e563]
+          - cell "2" [ref=e564]
+          - cell "Active" [ref=e565]:
+            - generic [ref=e566]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e567]:
+            - link "Edit" [ref=e568] [cursor=pointer]:
+              - /url: /alerts/184/edit
+            - link "Unsubscribe" [ref=e569] [cursor=pointer]:
+              - /url: /alerts/184/unsubscribe
+            - button "Delete" [ref=e571] [cursor=pointer]
+        - row "Alert_dfd8t8 Hanoi $400,000 – $900,000 —+ apartment 2 Active Edit Unsubscribe Delete" [ref=e572]:
+          - cell "Alert_dfd8t8" [ref=e573]
+          - cell "Hanoi" [ref=e574]
+          - cell "$400,000 – $900,000" [ref=e575]
+          - cell "—+" [ref=e576]
+          - cell "apartment" [ref=e577]
+          - cell "2" [ref=e578]
+          - cell "Active" [ref=e579]:
+            - generic [ref=e580]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e581]:
+            - link "Edit" [ref=e582] [cursor=pointer]:
+              - /url: /alerts/183/edit
+            - link "Unsubscribe" [ref=e583] [cursor=pointer]:
+              - /url: /alerts/183/unsubscribe
+            - button "Delete" [ref=e585] [cursor=pointer]
+        - row "Alert_1mezg6 Hanoi $900,000 – $100,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e586]:
+          - cell "Alert_1mezg6" [ref=e587]
+          - cell "Hanoi" [ref=e588]
+          - cell "$900,000 – $100,000" [ref=e589]
+          - cell "—+" [ref=e590]
+          - cell "any" [ref=e591]
+          - cell "0" [ref=e592]
+          - cell "Active" [ref=e593]:
+            - generic [ref=e594]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e595]:
+            - link "Edit" [ref=e596] [cursor=pointer]:
+              - /url: /alerts/182/edit
+            - link "Unsubscribe" [ref=e597] [cursor=pointer]:
+              - /url: /alerts/182/unsubscribe
+            - button "Delete" [ref=e599] [cursor=pointer]
+        - row "Alert_h3xxdf Hanoi — – — —+ any 7 Disabled Edit Unsubscribe Delete" [ref=e600]:
+          - cell "Alert_h3xxdf" [ref=e601]
+          - cell "Hanoi" [ref=e602]
+          - cell "— – —" [ref=e603]
+          - cell "—+" [ref=e604]
+          - cell "any" [ref=e605]
+          - cell "7" [ref=e606]
+          - cell "Disabled" [ref=e607]:
+            - generic [ref=e608]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e609]:
+            - link "Edit" [ref=e610] [cursor=pointer]:
+              - /url: /alerts/181/edit
+            - link "Unsubscribe" [ref=e611] [cursor=pointer]:
+              - /url: /alerts/181/unsubscribe
+            - button "Delete" [ref=e613] [cursor=pointer]
+        - row "Alert_ekpmdw Da Nang — – — —+ any 5 Active Edit Unsubscribe Delete" [ref=e614]:
+          - cell "Alert_ekpmdw" [ref=e615]
+          - cell "Da Nang" [ref=e616]
+          - cell "— – —" [ref=e617]
+          - cell "—+" [ref=e618]
+          - cell "any" [ref=e619]
+          - cell "5" [ref=e620]
+          - cell "Active" [ref=e621]:
+            - generic [ref=e622]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e623]:
+            - link "Edit" [ref=e624] [cursor=pointer]:
+              - /url: /alerts/179/edit
+            - link "Unsubscribe" [ref=e625] [cursor=pointer]:
+              - /url: /alerts/179/unsubscribe
+            - button "Delete" [ref=e627] [cursor=pointer]
+        - row "Alert_k82fjq Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e628]:
+          - cell "Alert_k82fjq" [ref=e629]
+          - cell "Hanoi" [ref=e630]
+          - cell "— – —" [ref=e631]
+          - cell "—+" [ref=e632]
+          - cell "any" [ref=e633]
+          - cell "7" [ref=e634]
+          - cell "Active" [ref=e635]:
+            - generic [ref=e636]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e637]:
+            - link "Edit" [ref=e638] [cursor=pointer]:
+              - /url: /alerts/178/edit
+            - link "Unsubscribe" [ref=e639] [cursor=pointer]:
+              - /url: /alerts/178/unsubscribe
+            - button "Delete" [ref=e641] [cursor=pointer]
+        - row "Alert_zolz3p Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e642]:
+          - cell "Alert_zolz3p" [ref=e643]
+          - cell "Hanoi" [ref=e644]
+          - cell "— – —" [ref=e645]
+          - cell "—+" [ref=e646]
+          - cell "any" [ref=e647]
+          - cell "7" [ref=e648]
+          - cell "Active" [ref=e649]:
+            - generic [ref=e650]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e651]:
+            - link "Edit" [ref=e652] [cursor=pointer]:
+              - /url: /alerts/177/edit
+            - link "Unsubscribe" [ref=e653] [cursor=pointer]:
+              - /url: /alerts/177/unsubscribe
+            - button "Delete" [ref=e655] [cursor=pointer]
+        - row "Alert_ooalfe Ho Chi Minh City — – — —+ any 3 Active Edit Unsubscribe Delete" [ref=e656]:
+          - cell "Alert_ooalfe" [ref=e657]
+          - cell "Ho Chi Minh City" [ref=e658]
+          - cell "— – —" [ref=e659]
+          - cell "—+" [ref=e660]
+          - cell "any" [ref=e661]
+          - cell "3" [ref=e662]
+          - cell "Active" [ref=e663]:
+            - generic [ref=e664]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e665]:
+            - link "Edit" [ref=e666] [cursor=pointer]:
+              - /url: /alerts/176/edit
+            - link "Unsubscribe" [ref=e667] [cursor=pointer]:
+              - /url: /alerts/176/unsubscribe
+            - button "Delete" [ref=e669] [cursor=pointer]
+        - row "Alert_zakmto Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e670]:
+          - cell "Alert_zakmto" [ref=e671]
+          - cell "Hanoi" [ref=e672]
+          - cell "$400,000 – $900,000" [ref=e673]
+          - cell "1+" [ref=e674]
+          - cell "apartment" [ref=e675]
+          - cell "2" [ref=e676]
+          - cell "Active" [ref=e677]:
+            - generic [ref=e678]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e679]:
+            - link "Edit" [ref=e680] [cursor=pointer]:
+              - /url: /alerts/175/edit
+            - link "Unsubscribe" [ref=e681] [cursor=pointer]:
+              - /url: /alerts/175/unsubscribe
+            - button "Delete" [ref=e683] [cursor=pointer]
+        - row "Test Flash Alert Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e684]:
+          - cell "Test Flash Alert" [ref=e685]
+          - cell "Hanoi" [ref=e686]
+          - cell "— – —" [ref=e687]
+          - cell "—+" [ref=e688]
+          - cell "any" [ref=e689]
+          - cell "7" [ref=e690]
+          - cell "Active" [ref=e691]:
+            - generic [ref=e692]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e693]:
+            - link "Edit" [ref=e694] [cursor=pointer]:
+              - /url: /alerts/174/edit
+            - link "Unsubscribe" [ref=e695] [cursor=pointer]:
+              - /url: /alerts/174/unsubscribe
+            - button "Delete" [ref=e697] [cursor=pointer]
+        - row "Alert_9vzd2v Hanoi $400,000 – $900,000 —+ apartment 2 Active Edit Unsubscribe Delete" [ref=e698]:
+          - cell "Alert_9vzd2v" [ref=e699]
+          - cell "Hanoi" [ref=e700]
+          - cell "$400,000 – $900,000" [ref=e701]
+          - cell "—+" [ref=e702]
+          - cell "apartment" [ref=e703]
+          - cell "2" [ref=e704]
+          - cell "Active" [ref=e705]:
+            - generic [ref=e706]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e707]:
+            - link "Edit" [ref=e708] [cursor=pointer]:
+              - /url: /alerts/173/edit
+            - link "Unsubscribe" [ref=e709] [cursor=pointer]:
+              - /url: /alerts/173/unsubscribe
+            - button "Delete" [ref=e711] [cursor=pointer]
+        - row "Alert_hmu0a0 Hanoi $900,000 – $100,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e712]:
+          - cell "Alert_hmu0a0" [ref=e713]
+          - cell "Hanoi" [ref=e714]
+          - cell "$900,000 – $100,000" [ref=e715]
+          - cell "—+" [ref=e716]
+          - cell "any" [ref=e717]
+          - cell "0" [ref=e718]
+          - cell "Active" [ref=e719]:
+            - generic [ref=e720]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e721]:
+            - link "Edit" [ref=e722] [cursor=pointer]:
+              - /url: /alerts/172/edit
+            - link "Unsubscribe" [ref=e723] [cursor=pointer]:
+              - /url: /alerts/172/unsubscribe
+            - button "Delete" [ref=e725] [cursor=pointer]
+        - row "Alert_a41k6n Hanoi — – — —+ any 7 Disabled Edit Unsubscribe Delete" [ref=e726]:
+          - cell "Alert_a41k6n" [ref=e727]
+          - cell "Hanoi" [ref=e728]
+          - cell "— – —" [ref=e729]
+          - cell "—+" [ref=e730]
+          - cell "any" [ref=e731]
+          - cell "7" [ref=e732]
+          - cell "Disabled" [ref=e733]:
+            - generic [ref=e734]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e735]:
+            - link "Edit" [ref=e736] [cursor=pointer]:
+              - /url: /alerts/171/edit
+            - link "Unsubscribe" [ref=e737] [cursor=pointer]:
+              - /url: /alerts/171/unsubscribe
+            - button "Delete" [ref=e739] [cursor=pointer]
+        - row "Alert_ecrowv Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e740]:
+          - cell "Alert_ecrowv" [ref=e741]
+          - cell "Hanoi" [ref=e742]
+          - cell "— – —" [ref=e743]
+          - cell "—+" [ref=e744]
+          - cell "any" [ref=e745]
+          - cell "7" [ref=e746]
+          - cell "Active" [ref=e747]:
+            - generic [ref=e748]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e749]:
+            - link "Edit" [ref=e750] [cursor=pointer]:
+              - /url: /alerts/170/edit
+            - link "Unsubscribe" [ref=e751] [cursor=pointer]:
+              - /url: /alerts/170/unsubscribe
+            - button "Delete" [ref=e753] [cursor=pointer]
+        - row "Alert_l6eqf8 Da Nang — – — —+ any 5 Active Edit Unsubscribe Delete" [ref=e754]:
+          - cell "Alert_l6eqf8" [ref=e755]
+          - cell "Da Nang" [ref=e756]
+          - cell "— – —" [ref=e757]
+          - cell "—+" [ref=e758]
+          - cell "any" [ref=e759]
+          - cell "5" [ref=e760]
+          - cell "Active" [ref=e761]:
+            - generic [ref=e762]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e763]:
+            - link "Edit" [ref=e764] [cursor=pointer]:
+              - /url: /alerts/169/edit
+            - link "Unsubscribe" [ref=e765] [cursor=pointer]:
+              - /url: /alerts/169/unsubscribe
+            - button "Delete" [ref=e767] [cursor=pointer]
+        - row "Alert_mzxdev Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e768]:
+          - cell "Alert_mzxdev" [ref=e769]
+          - cell "Hanoi" [ref=e770]
+          - cell "— – —" [ref=e771]
+          - cell "—+" [ref=e772]
+          - cell "any" [ref=e773]
+          - cell "7" [ref=e774]
+          - cell "Active" [ref=e775]:
+            - generic [ref=e776]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e777]:
+            - link "Edit" [ref=e778] [cursor=pointer]:
+              - /url: /alerts/168/edit
+            - link "Unsubscribe" [ref=e779] [cursor=pointer]:
+              - /url: /alerts/168/unsubscribe
+            - button "Delete" [ref=e781] [cursor=pointer]
+        - row "Alert_6vq3vc Hanoi — – — —+ any 7 Active Edit Unsubscribe Delete" [ref=e782]:
+          - cell "Alert_6vq3vc" [ref=e783]
+          - cell "Hanoi" [ref=e784]
+          - cell "— – —" [ref=e785]
+          - cell "—+" [ref=e786]
+          - cell "any" [ref=e787]
+          - cell "7" [ref=e788]
+          - cell "Active" [ref=e789]:
+            - generic [ref=e790]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e791]:
+            - link "Edit" [ref=e792] [cursor=pointer]:
+              - /url: /alerts/167/edit
+            - link "Unsubscribe" [ref=e793] [cursor=pointer]:
+              - /url: /alerts/167/unsubscribe
+            - button "Delete" [ref=e795] [cursor=pointer]
+        - row "Alert_zcq4ea Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e796]:
+          - cell "Alert_zcq4ea" [ref=e797]
+          - cell "Hanoi" [ref=e798]
+          - cell "$400,000 – $900,000" [ref=e799]
+          - cell "1+" [ref=e800]
+          - cell "apartment" [ref=e801]
+          - cell "2" [ref=e802]
+          - cell "Active" [ref=e803]:
+            - generic [ref=e804]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e805]:
+            - link "Edit" [ref=e806] [cursor=pointer]:
+              - /url: /alerts/166/edit
+            - link "Unsubscribe" [ref=e807] [cursor=pointer]:
+              - /url: /alerts/166/unsubscribe
+            - button "Delete" [ref=e809] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $9,999,999 – $200,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e810]:
+          - cell "Bug Price Alert" [ref=e811]
+          - cell "Hanoi" [ref=e812]
+          - cell "$9,999,999 – $200,000" [ref=e813]
+          - cell "—+" [ref=e814]
+          - cell "any" [ref=e815]
+          - cell "0" [ref=e816]
+          - cell "Active" [ref=e817]:
+            - generic [ref=e818]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e819]:
+            - link "Edit" [ref=e820] [cursor=pointer]:
+              - /url: /alerts/165/edit
+            - link "Unsubscribe" [ref=e821] [cursor=pointer]:
+              - /url: /alerts/165/unsubscribe
+            - button "Delete" [ref=e823] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $999,999 – $100 —+ any 0 Active Edit Unsubscribe Delete" [ref=e824]:
+          - cell "Bug Price Alert" [ref=e825]
+          - cell "Hanoi" [ref=e826]
+          - cell "$999,999 – $100" [ref=e827]
+          - cell "—+" [ref=e828]
+          - cell "any" [ref=e829]
+          - cell "0" [ref=e830]
+          - cell "Active" [ref=e831]:
+            - generic [ref=e832]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e833]:
+            - link "Edit" [ref=e834] [cursor=pointer]:
+              - /url: /alerts/163/edit
+            - link "Unsubscribe" [ref=e835] [cursor=pointer]:
+              - /url: /alerts/163/unsubscribe
+            - button "Delete" [ref=e837] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $999,999 – $100 —+ any 0 Active Edit Unsubscribe Delete" [ref=e838]:
+          - cell "Bug Price Alert" [ref=e839]
+          - cell "Hanoi" [ref=e840]
+          - cell "$999,999 – $100" [ref=e841]
+          - cell "—+" [ref=e842]
+          - cell "any" [ref=e843]
+          - cell "0" [ref=e844]
+          - cell "Active" [ref=e845]:
+            - generic [ref=e846]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e847]:
+            - link "Edit" [ref=e848] [cursor=pointer]:
+              - /url: /alerts/161/edit
+            - link "Unsubscribe" [ref=e849] [cursor=pointer]:
+              - /url: /alerts/161/unsubscribe
+            - button "Delete" [ref=e851] [cursor=pointer]
+        - row "Bug Price Alert Hanoi $999,999 – $100 —+ any 0 Active Edit Unsubscribe Delete" [ref=e852]:
+          - cell "Bug Price Alert" [ref=e853]
+          - cell "Hanoi" [ref=e854]
+          - cell "$999,999 – $100" [ref=e855]
+          - cell "—+" [ref=e856]
+          - cell "any" [ref=e857]
+          - cell "0" [ref=e858]
+          - cell "Active" [ref=e859]:
+            - generic [ref=e860]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e861]:
+            - link "Edit" [ref=e862] [cursor=pointer]:
+              - /url: /alerts/159/edit
+            - link "Unsubscribe" [ref=e863] [cursor=pointer]:
+              - /url: /alerts/159/unsubscribe
+            - button "Delete" [ref=e865] [cursor=pointer]
+        - row "test2824 test7610 test4764-BVA-mpv7kjrm680 Hanoi-mpv7kjrmadz3 $9,999,999 – $200,000 —+ any 0 Active Edit Unsubscribe Delete" [ref=e866]:
+          - cell "test2824 test7610 test4764-BVA-mpv7kjrm680" [ref=e867]
+          - cell "Hanoi-mpv7kjrmadz3" [ref=e868]
+          - cell "$9,999,999 – $200,000" [ref=e869]
+          - cell "—+" [ref=e870]
+          - cell "any" [ref=e871]
+          - cell "0" [ref=e872]
+          - cell "Active" [ref=e873]:
+            - generic [ref=e874]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e875]:
+            - link "Edit" [ref=e876] [cursor=pointer]:
+              - /url: /alerts/153/edit
+            - link "Unsubscribe" [ref=e877] [cursor=pointer]:
+              - /url: /alerts/153/unsubscribe
+            - button "Delete" [ref=e879] [cursor=pointer]
+        - row "test290 test852 test3202 Nha Trang-mpv7jr3ngj5x $317,259 – $638,908 2+ apartment 0 Active Edit Unsubscribe Delete" [ref=e880]:
+          - cell "test290 test852 test3202" [ref=e881]
+          - cell "Nha Trang-mpv7jr3ngj5x" [ref=e882]
+          - cell "$317,259 – $638,908" [ref=e883]
+          - cell "2+" [ref=e884]
+          - cell "apartment" [ref=e885]
+          - cell "0" [ref=e886]
+          - cell "Active" [ref=e887]:
+            - generic [ref=e888]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e889]:
+            - link "Edit" [ref=e890] [cursor=pointer]:
+              - /url: /alerts/148/edit
+            - link "Unsubscribe" [ref=e891] [cursor=pointer]:
+              - /url: /alerts/148/unsubscribe
+            - button "Delete" [ref=e893] [cursor=pointer]
+        - row "test5359 test9482 test8863 Can Tho-mpv7je2ac2of $399,545 – $1,161,631 3+ villa 0 Active Edit Unsubscribe Delete" [ref=e894]:
+          - cell "test5359 test9482 test8863" [ref=e895]
+          - cell "Can Tho-mpv7je2ac2of" [ref=e896]
+          - cell "$399,545 – $1,161,631" [ref=e897]
+          - cell "3+" [ref=e898]
+          - cell "villa" [ref=e899]
+          - cell "0" [ref=e900]
+          - cell "Active" [ref=e901]:
+            - generic [ref=e902]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e903]:
+            - link "Edit" [ref=e904] [cursor=pointer]:
+              - /url: /alerts/147/edit
+            - link "Unsubscribe" [ref=e905] [cursor=pointer]:
+              - /url: /alerts/147/unsubscribe
+            - button "Delete" [ref=e907] [cursor=pointer]
+        - row "Hanoi Apartment Alert Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e908]:
+          - cell "Hanoi Apartment Alert" [ref=e909]
+          - cell "Hanoi" [ref=e910]
+          - cell "$400,000 – $900,000" [ref=e911]
+          - cell "1+" [ref=e912]
+          - cell "apartment" [ref=e913]
+          - cell "2" [ref=e914]
+          - cell "Active" [ref=e915]:
+            - generic [ref=e916]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e917]:
+            - link "Edit" [ref=e918] [cursor=pointer]:
+              - /url: /alerts/83/edit
+            - link "Unsubscribe" [ref=e919] [cursor=pointer]:
+              - /url: /alerts/83/unsubscribe
+            - button "Delete" [ref=e921] [cursor=pointer]
+        - row "Hanoi Apartment Alert Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e922]:
+          - cell "Hanoi Apartment Alert" [ref=e923]
+          - cell "Hanoi" [ref=e924]
+          - cell "$400,000 – $900,000" [ref=e925]
+          - cell "1+" [ref=e926]
+          - cell "apartment" [ref=e927]
+          - cell "2" [ref=e928]
+          - cell "Active" [ref=e929]:
+            - generic [ref=e930]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e931]:
+            - link "Edit" [ref=e932] [cursor=pointer]:
+              - /url: /alerts/82/edit
+            - link "Unsubscribe" [ref=e933] [cursor=pointer]:
+              - /url: /alerts/82/unsubscribe
+            - button "Delete" [ref=e935] [cursor=pointer]
+        - row "Hanoi Apartment Alert Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e936]:
+          - cell "Hanoi Apartment Alert" [ref=e937]
+          - cell "Hanoi" [ref=e938]
+          - cell "$400,000 – $900,000" [ref=e939]
+          - cell "1+" [ref=e940]
+          - cell "apartment" [ref=e941]
+          - cell "2" [ref=e942]
+          - cell "Active" [ref=e943]:
+            - generic [ref=e944]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e945]:
+            - link "Edit" [ref=e946] [cursor=pointer]:
+              - /url: /alerts/81/edit
+            - link "Unsubscribe" [ref=e947] [cursor=pointer]:
+              - /url: /alerts/81/unsubscribe
+            - button "Delete" [ref=e949] [cursor=pointer]
+        - row "Hanoi Apartment Alert Hanoi $400,000 – $900,000 1+ apartment 2 Disabled Edit Unsubscribe Delete" [ref=e950]:
+          - cell "Hanoi Apartment Alert" [ref=e951]
+          - cell "Hanoi" [ref=e952]
+          - cell "$400,000 – $900,000" [ref=e953]
+          - cell "1+" [ref=e954]
+          - cell "apartment" [ref=e955]
+          - cell "2" [ref=e956]
+          - cell "Disabled" [ref=e957]:
+            - generic [ref=e958]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e959]:
+            - link "Edit" [ref=e960] [cursor=pointer]:
+              - /url: /alerts/79/edit
+            - link "Unsubscribe" [ref=e961] [cursor=pointer]:
+              - /url: /alerts/79/unsubscribe
+            - button "Delete" [ref=e963] [cursor=pointer]
+        - row "Hanoi Apartment Alert Hanoi $400,000 – $900,000 1+ apartment 2 Active Edit Unsubscribe Delete" [ref=e964]:
+          - cell "Hanoi Apartment Alert" [ref=e965]
+          - cell "Hanoi" [ref=e966]
+          - cell "$400,000 – $900,000" [ref=e967]
+          - cell "1+" [ref=e968]
+          - cell "apartment" [ref=e969]
+          - cell "2" [ref=e970]
+          - cell "Active" [ref=e971]:
+            - generic [ref=e972]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e973]:
+            - link "Edit" [ref=e974] [cursor=pointer]:
+              - /url: /alerts/78/edit
+            - link "Unsubscribe" [ref=e975] [cursor=pointer]:
+              - /url: /alerts/78/unsubscribe
+            - button "Delete" [ref=e977] [cursor=pointer]
+        - row "Hanoi Hanoi $1,000 – $10 —+ any 0 Active Edit Unsubscribe Delete" [ref=e978]:
+          - cell "Hanoi" [ref=e979]
+          - cell "Hanoi" [ref=e980]
+          - cell "$1,000 – $10" [ref=e981]
+          - cell "—+" [ref=e982]
+          - cell "any" [ref=e983]
+          - cell "0" [ref=e984]
+          - cell "Active" [ref=e985]:
+            - generic [ref=e986]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e987]:
+            - link "Edit" [ref=e988] [cursor=pointer]:
+              - /url: /alerts/70/edit
+            - link "Unsubscribe" [ref=e989] [cursor=pointer]:
+              - /url: /alerts/70/unsubscribe
+            - button "Delete" [ref=e991] [cursor=pointer]
+        - row "Hanoi · Apartment $879,794 Hanoi $879,794 – $879,794 1+ apartment 1 Active Edit Unsubscribe Delete" [ref=e992]:
+          - cell "Hanoi · Apartment $879,794" [ref=e993]
+          - cell "Hanoi" [ref=e994]
+          - cell "$879,794 – $879,794" [ref=e995]
+          - cell "1+" [ref=e996]
+          - cell "apartment" [ref=e997]
+          - cell "1" [ref=e998]
+          - cell "Active" [ref=e999]:
+            - generic [ref=e1000]: Active
+          - cell "Edit Unsubscribe Delete" [ref=e1001]:
+            - link "Edit" [ref=e1002] [cursor=pointer]:
+              - /url: /alerts/69/edit
+            - link "Unsubscribe" [ref=e1003] [cursor=pointer]:
+              - /url: /alerts/69/unsubscribe
+            - button "Delete" [ref=e1005] [cursor=pointer]
+        - row "3432 43243242 $10 – $1 —+ any 0 Disabled Edit Unsubscribe Delete" [ref=e1006]:
+          - cell "3432" [ref=e1007]
+          - cell "43243242" [ref=e1008]
+          - cell "$10 – $1" [ref=e1009]
+          - cell "—+" [ref=e1010]
+          - cell "any" [ref=e1011]
+          - cell "0" [ref=e1012]
+          - cell "Disabled" [ref=e1013]:
+            - generic [ref=e1014]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e1015]:
+            - link "Edit" [ref=e1016] [cursor=pointer]:
+              - /url: /alerts/68/edit
+            - link "Unsubscribe" [ref=e1017] [cursor=pointer]:
+              - /url: /alerts/68/unsubscribe
+            - button "Delete" [ref=e1019] [cursor=pointer]
+        - row "nha can tho 1 Can Tho $1,260,231 – $1,360,231 —+ house 1 Disabled Edit Unsubscribe Delete" [ref=e1020]:
+          - cell "nha can tho 1" [ref=e1021]
+          - cell "Can Tho" [ref=e1022]
+          - cell "$1,260,231 – $1,360,231" [ref=e1023]
+          - cell "—+" [ref=e1024]
+          - cell "house" [ref=e1025]
+          - cell "1" [ref=e1026]
+          - cell "Disabled" [ref=e1027]:
+            - generic [ref=e1028]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e1029]:
+            - link "Edit" [ref=e1030] [cursor=pointer]:
+              - /url: /alerts/11/edit
+            - link "Unsubscribe" [ref=e1031] [cursor=pointer]:
+              - /url: /alerts/11/unsubscribe
+            - button "Delete" [ref=e1033] [cursor=pointer]
+        - row "2 people Ho Chi MInh $300 – $500 2+ apartment 0 Disabled Edit Unsubscribe Delete" [ref=e1034]:
+          - cell "2 people" [ref=e1035]
+          - cell "Ho Chi MInh" [ref=e1036]
+          - cell "$300 – $500" [ref=e1037]
+          - cell "2+" [ref=e1038]
+          - cell "apartment" [ref=e1039]
+          - cell "0" [ref=e1040]
+          - cell "Disabled" [ref=e1041]:
+            - generic [ref=e1042]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e1043]:
+            - link "Edit" [ref=e1044] [cursor=pointer]:
+              - /url: /alerts/10/edit
+            - link "Unsubscribe" [ref=e1045] [cursor=pointer]:
+              - /url: /alerts/10/unsubscribe
+            - button "Delete" [ref=e1047] [cursor=pointer]
+        - row "Test Alert Saigon $1,000 – $5,000 2+ apartment 0 Disabled Edit Unsubscribe Delete" [ref=e1048]:
+          - cell "Test Alert" [ref=e1049]
+          - cell "Saigon" [ref=e1050]
+          - cell "$1,000 – $5,000" [ref=e1051]
+          - cell "2+" [ref=e1052]
+          - cell "apartment" [ref=e1053]
+          - cell "0" [ref=e1054]
+          - cell "Disabled" [ref=e1055]:
+            - generic [ref=e1056]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e1057]:
+            - link "Edit" [ref=e1058] [cursor=pointer]:
+              - /url: /alerts/3/edit
+            - link "Unsubscribe" [ref=e1059] [cursor=pointer]:
+              - /url: /alerts/3/unsubscribe
+            - button "Delete" [ref=e1061] [cursor=pointer]
+        - row "Test Alert Hanoi $1,000 – $5,000 2+ apartment 0 Disabled Edit Unsubscribe Delete" [ref=e1062]:
+          - cell "Test Alert" [ref=e1063]
+          - cell "Hanoi" [ref=e1064]
+          - cell "$1,000 – $5,000" [ref=e1065]
+          - cell "2+" [ref=e1066]
+          - cell "apartment" [ref=e1067]
+          - cell "0" [ref=e1068]
+          - cell "Disabled" [ref=e1069]:
+            - generic [ref=e1070]: Disabled
+          - cell "Edit Unsubscribe Delete" [ref=e1071]:
+            - link "Edit" [ref=e1072] [cursor=pointer]:
+              - /url: /alerts/2/edit
+            - link "Unsubscribe" [ref=e1073] [cursor=pointer]:
+              - /url: /alerts/2/unsubscribe
+            - button "Delete" [ref=e1075] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | import { expect, Page } from "@playwright/test";
+  2  | import { BasePage } from "./BasePage";
+  3  | import { Alert } from "../utils/faker";
+  4  | 
+  5  | export class AlertPage extends BasePage {
+  6  | 
+  7  |     constructor(page: Page) {
+  8  |         super(page);
+  9  |     }
+  10 | 
+  11 |     async createAlert(alert: Alert) {
+  12 | 
+  13 |         await this.page.click('[data-test="create-alert-cta"]');
+  14 | 
+  15 |         await this.page.fill('[data-test="name"]', alert.name);
+  16 | 
+  17 |         await this.page.fill('[data-test="city"]', alert.city);
+  18 | 
+  19 |         await this.page.fill('[data-test="min-price"]', alert.minPrice);
+  20 | 
+  21 |         await this.page.fill('[data-test="max-price"]', alert.maxPrice);
+  22 | 
+  23 |         await this.page.fill('[data-test="min-bedrooms"]', alert.minBedrooms);
+  24 | 
+  25 |         await this.page.selectOption('[data-test="property-type"]', alert.propertyType);
+  26 | 
+  27 |         await this.page.click('[data-test="submit"]');
+  28 |     }
+  29 | 
+  30 |     async isAlertCreated() {
+  31 |         return await this.page.getByText(/Alert created/i).isVisible();
+  32 |     }
+  33 | 
+  34 |     async deleteAlert(alertName: string) {
+  35 |         const deleteButton = this.page.locator(`//*[text()="${alertName}"]/following-sibling::*//button[@data-test="delete-alert"]`);
+  36 |         await deleteButton.hover();
+  37 |         await this.page.waitForTimeout(500);
+  38 |         await deleteButton.click({ delay: 200 });
+  39 |         console.log("Delete button clicked");
+  40 |         await this.page.waitForTimeout(1000); // Wait for the dialog to appear
+  41 |         const dialogPromise = this.page.waitForEvent('dialog');
+  42 | 
+  43 |         const dialog = await dialogPromise;
+  44 | 
+  45 |         await expect(dialog.message()).toBe('Delete alert?');
+  46 | 
+  47 |         await dialog.dismiss();
+  48 |     }
+  49 | 
+  50 | 
+  51 |     async isAlertDeleted() {
+  52 |         return await this.page.getByText(/Alert removed/i).isVisible();
+  53 |     }
+  54 | 
+  55 |     async editAlert(oldAlert: Alert, newAlert: Alert) {
+  56 |         const editButton = this.page.locator(`//*[text()="${oldAlert.name}"]/following-sibling::*//*[@data-test="edit-alert"]`);
+> 57 |         await editButton.click();
+     |                          ^ Error: locator.click: Test timeout of 60000ms exceeded.
+  58 |         await this.page.fill('[data-test="name"]', newAlert.name);
+  59 | 
+  60 |         await this.page.fill('[data-test="city"]', newAlert.city);
+  61 | 
+  62 |         await this.page.fill('[data-test="min-price"]', newAlert.minPrice);
+  63 | 
+  64 |         await this.page.fill('[data-test="max-price"]', newAlert.maxPrice);
+  65 | 
+  66 |         await this.page.fill('[data-test="min-bedrooms"]', newAlert.minBedrooms);
+  67 | 
+  68 |         await this.page.selectOption('[data-test="property-type"]', newAlert.propertyType);
+  69 | 
+  70 |         await this.page.click('[data-test="submit"]');
+  71 | 
+  72 |         //wite new alert to oldAlert data to faker.ts for future use
+  73 |         const fs = require('fs');
+  74 |         fs.appendFileSync(
+  75 |             'utils/faker.ts',
+  76 |             `export const oldAlert: Alert = ${JSON.stringify(newAlert, null, 4)};`
+  77 |         );
+  78 |     }
+  79 | 
+  80 |     async isAlertEdited() {
+  81 |         return await this.page.getByText(/Alert updated/i).isVisible();
+  82 |     }
+  83 | 
+  84 |     async goToAlertsPage() {
+  85 |         await this.page.click('[data-test="nav-alerts"]');
+  86 |         await this.waitForPageLoad();
+  87 |     }
+  88 | }
+```
